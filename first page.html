@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            background-image: url(normal.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* margin-top: -50px; */
+        }
+
+        .glass-container {
+            height: 600px;
+            width: 800px;
+            padding: 30px 50px;
+            border-radius: 50px;
+            background-color: rgba(255, 255, 255, 0.027);
+            backdrop-filter: blur(10px);
+            border-top: 5px solid rgba(255, 255, 255, 0.4);
+            border-left: 5px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.089);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            /* align-items: center; */
+
+            font-family: Poppins, sans-serif;
+            font-size: 18px;
+            text-align: justify;
+            line-height: 185%;
+        }
+
+        .first {
+            height: 600px;
+            width: 350px;
+            /* border: 1px solid black; */
+
+        }
+
+        .head {
+            height: 350px;
+            width: 350px;
+            /* border: 1px solid black; */
+            margin-top: 35px;
+
+        }
+
+        .second {
+            height: 600px;
+            width: 400px;
+            /* border: 1px solid black; */
+            margin-left: 390px;
+            margin-top: -550px;
+            padding: 25px;
+        }
+
+        .t {
+            height: 350px;
+            width: 400px;
+            /* border: 1px solid black; */
+            margin-top: 35px;
+        }
+
+        .circle {
+            height: 300px;
+            width: 300px;
+            /* border: 1px solid black; */
+            margin-left: 200px;
+            margin-top: -30px;
+        }
+
+        /* styles.css */
+
+
+        .outer-circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 5px solid rgb(7, 7, 61);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: rotate 6s linear infinite, pulsate 2s ease-in-out infinite;
+        }
+
+        .middle-circle {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: #ffed47;
+            /* Non-green color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: rotate-reverse 6s linear infinite, color-change 4s ease-in-out infinite;
+        }
+
+        .inner-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #ffa500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: rotate 6s linear infinite, scale-up 3s ease-in-out infinite;
+        }
+
+        .core-circle {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            background-color: #4c96e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: rotate-reverse 6s linear infinite, glow 2s ease-in-out infinite;
+        }
+
+        .text-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ed7042;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Ensure text inside stays stationary */
+        .text-box {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            position: relative;
+            /* Ensure text-box remains in place */
+            z-index: 1;
+            /* Ensure text is on top of the animated circles */
+
+        }
+
+        /* Text styles */
+        .text {
+            font-size: 10px;
+            text-align: center;
+            color: #000000;
+        }
+
+        /* Animation Keyframes */
+
+        /* Continuous rotation */
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Reverse rotation */
+        @keyframes rotate-reverse {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+
+        /* Pulsating effect */
+        @keyframes pulsate {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Color change effect */
+        @keyframes color-change {
+            0% {
+                background-color: #f86449;
+            }
+
+            50% {
+                background-color: #f86449;
+            }
+
+            100% {
+                background-color: #f86449;
+            }
+        }
+
+        /* Scale-up effect */
+        @keyframes scale-up {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Glow effect */
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 5px #1e90ff;
+            }
+
+            50% {
+                box-shadow: 0 0 20px #1e90ff;
+            }
+
+            100% {
+                box-shadow: 0 0 5px #1e90ff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glass-container">
+        <div class="first">
+            <div class="head">
+                <artcile style="font-size: 75px;">Welcome</artcile>
+                <h1 style="font-size: 60px; margin-top: 15px;">to</h1>
+                <h1 style="font-size: 60px; margin-top: 30px;">Links</h1>
+                <h1 style="font-size: 60px; margin-top: 35px;">in Figma!</h1>
+                <article style=" margin-top: 300px;">Not interested in playing</article>
+            </div>
+        </div>
+        <div class="second">
+            <div class="t">
+                <article>We're excited to announce support</article>
+                <article style="margin-top: -5px;">for Links in Figma!</article>
+                <article style="margin-top: 50px;">in this file we'll walk through</article>
+                <article style="margin-top: -5px;">creating,editing,and styling links...</article>
+                <article style="margin-top: 50px;">...but also play little game about</article>
+                <article style="margin-top: -5px;">their history!</article>
+            </div>
+
+            <div class="circle">
+                <div class="outer-circle">
+                    <div class="middle-circle">
+                        <div class="inner-circle">
+                            <div class="core-circle">
+                                <div class="text-circle">
+                                    <div class="text-box">
+                                        <a href="questionlist.html">
+                                            <div class="text">Start the Game</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

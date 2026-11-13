@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Option 1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            margin: 0;
+            user-select: none;
+            padding: 0;
+        }
+
+        body {
+            background-color: #ffebee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 1rem;
+        }
+
+        #ques {
+            width: 100%;
+            max-width: 70rem;
+            padding: 2rem;
+            background-color: #FFE8C5;
+            border-top: 15px solid #FF0000;
+            border-radius: 30px;
+            color: #C40C0C;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+            box-sizing: border-box;
+        }
+
+        .circle {
+            height: 3rem;
+            width: 3rem;
+            background-color: white;
+            border: 10px solid #FF0000;
+            position: absolute;
+            top: -1.5rem;
+            left: 2rem;
+            border-radius: 100%;
+            text-align: center;
+            font-size: 2rem;
+            color: #4E31AA;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: bounce 2s infinite;
+        }
+
+        h1 {
+            animation: slideIn 1.2s ease-in-out;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            margin-top: 30px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        b {
+            font-size: 2rem;
+        }
+
+        img {
+            width: 100%;
+            max-width: 20rem;
+            border-radius: 10px;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        button {
+            background-color: #C80036;
+            color: white;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #FF0000;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            #ques {
+                padding: 1rem;
+            }
+
+            .circle {
+                height: 2.5rem;
+                width: 2.5rem;
+                font-size: 1.5rem;
+                top: -1rem;
+                left: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            b {
+                font-size: 1.5rem;
+            }
+
+            img {
+                max-width: 15rem;
+                top: 0.5rem;
+                right: 0.5rem;
+            }
+
+            button {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .circle {
+                height: 2rem;
+                width: 2rem;
+                font-size: 1.2rem;
+                top: -0.8rem;
+                left: 1rem;
+            }
+
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            b {
+                font-size: 1.2rem;
+            }
+
+            img {
+                max-width: 12rem;
+                top: 0.5rem;
+                right: 0.5rem;
+            }
+
+            button {
+                padding: 0.5rem 1.2rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ques">
+        <div class="circle">A</div>
+        <h1>Oops, the answer is wrong!</h1>
+        <p><b>Explanation:</b> <br>
+            It returns the actual data type of an object or <br>variable, including distinguishing between <br>different
+            object types like arrays and objects
+            This is incorrect. The typeof operator does not distinguish between all <br>object types. For example,
+            typeof [] (an array) and typeof {} (an object) <br>both return "object". The typeof operator can identify
+            primitives like <br>"string", "number", "boolean", "undefined", "symbol", "bigint", and <br>"function" (for
+            functions), but it simply returns "object" for all objects, <br> including arrays and null. <br>
+        <p>
+            <a href="index.html"><button type="button">Previous</button></a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            margin: 0;
+            user-select: none;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 1rem;
+        }
+
+        #ques {
+            width: 100%;
+            max-width: 70rem;
+            padding: 2rem;
+            background-color: #E1D7C6;
+            border-top: 15px solid #3a1078;
+            border-radius: 30px;
+            color: #4E31AA;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+            box-sizing: border-box;
+        }
+
+        .circle {
+            height: 3rem;
+            width: 3rem;
+            background-color: white;
+            border: 10px solid #3a1078;
+            position: absolute;
+            top: -1.5rem;
+            left: 2rem;
+            border-radius: 100%;
+            text-align: center;
+            font-size: 2rem;
+            color: #4E31AA;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: bounce 2s infinite;
+        }
+
+        h1 {
+            animation: slideIn 1.2s ease-in-out;
+            margin-bottom: 2rem;
+        }
+
+        label {
+            display: block;
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            text-align: left;
+            padding-left: 2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+            padding: 0.5rem;
+        }
+
+        label:hover {
+            background-color: #d0c7bb;
+        }
+
+        input[type="radio"] {
+            margin-right: 0.5rem;
+        }
+
+        img {
+            width: 100%;
+            max-width: 20rem;
+            border-radius: 10px;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        button {
+            background-color: #4E31AA;
+            color: white;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3a1078;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            #ques {
+                width: 90%;
+                padding: 1rem;
+            }
+
+            .circle {
+                height: 2.5rem;
+                width: 2.5rem;
+                font-size: 1.5rem;
+                top: -1rem;
+                left: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-top: 1rem;
+            }
+
+            label {
+                font-size: 1rem;
+                padding-left: 1rem;
+            }
+
+            button {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.9rem;
+
+            }
+        }
+    </style>
+    <script>
+        function setFormAction() {
+            const form = document.getElementById('quizForm');
+            const selectedAnswer = form.answer.value;
+
+            if (selectedAnswer === '1') {
+                form.action = 'pageB1.html';
+            } else if (selectedAnswer === '2') {
+                form.action = 'pageB2.html';
+            } else if (selectedAnswer === '3') {
+                form.action = 'pageB3.html';
+            } else if (selectedAnswer === '4') {
+                form.action = 'pageB4.html';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="ques">
+        <div class="circle">2</div>
+        <h1>Question 2: Which of the following CSS properties is used to control the layout of a grid item within a CSS
+            Grid container?</h1>
+        <form id="quizForm" method="GET" onsubmit="setFormAction()">
+            <label>
+                <input type="radio" name="answer" value="1">
+                A) justify-content
+            </label>
+            <label>
+                <input type="radio" name="answer" value="2">
+                B) align-items
+            </label>
+            <label>
+                <input type="radio" name="answer" value="3">
+                C) grid-column
+            </label>
+            <label>
+                <input type="radio" name="answer" value="4">
+                D) flex-direction
+            </label><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

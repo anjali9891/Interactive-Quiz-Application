@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+    <style>
+        *{
+            margin: 0px;
+            animation: fadein 1s linear;
+        }
+        @keyframes fadein {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity:1;
+            }
+        }
+        .container{
+            background:url(bg7.avif);
+            background-size:cover;
+        }
+        h1{
+            font-family:'poppins';
+            font-size: 40px;
+            text-align: center;
+            text-decoration: underline;
+            color: black;
+            margin-left: -10px;
+        }
+        .container2{
+            height: 50px;
+            width: 400px;
+            background-color: white;
+            border: 1px solid purple;
+            border-radius: 10px;
+            padding: 5px;
+            margin-left: 465px;
+            animation: slide1 2s linear;
+        }
+        @keyframes slide1 {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+        .container2:hover{
+            background-color:lightcoral ;
+            border-radius: 5px;
+
+        }
+        .container2 p{
+            font-family: 'poppins';
+            margin-top: 6px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 13px;
+        }
+       #image{
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            top: 250px;
+            left: 1000px;
+        }
+        #image1{
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            top: 250px;
+            left: 80px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <h1>Question List</h1> <br><br>
+       <a href="quiz1.html"><div class="container2"><p>1. Who is the founder of JavaScript?</p></div></a><br>
+       <a href="quiz2.html"><div class="container2"><p>2. Which of the following CSS properties is used to control the layout of a grid item within a CSS Grid container?</p></div></a><br>
+       <a href="quiz3.html"><div class="container2"><p>3. What does the typeof operator in JavaScript do?</p></div></a><br>
+       <a href="index.html"><div class="container2"><p>4. What does the typeof operator in JavaScript do?</p></div></a><br>
+       <a href="nextpage1.html"><div class="container2"><p>5. What does the this keyword refer to in JavaScript?</p></div></a><br>
+       <a href="nextpage2.html"><div class="container2"><p>6. What is the purpose of the Promise object in JavaScript?</p></div></a><br>
+       <a href="quiz7.html"><div class="container2"><p>7. What is the purpose of the box-sizing CSS property?</p></div></a><br>
+       <a href="quiz8.html"><div class="container2"><p>8. Who is credited with the creation of JavaScript?</p></div></a><br>
+       <a href="quiz9.html"><div class="container2"><p>9. What does the typeof operator in JavaScript do?</p></div></a><br>
+       <a href="quiz10.html"><div class="container2"><p>10. Which of the following statements about JavaScript’s setTimeout function is true?</p></div>
+    </div></a>
+       <img src="question-1015308_1280-removebg-preview.png" id="image">
+    <img src="question-1015308_1280-removebg-preview.png" id="image1">
+</body>
+</html>
